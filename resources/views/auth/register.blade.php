@@ -21,9 +21,9 @@
           <div class="navbar-collapse-header d-md-none">
             <div class="row">
               <div class="col-6 collapse-brand">
-                <a href="../index.html">
-                  <img src="./dash/img/brand/blue.png">
-                </a>
+                <div class="col-md-2">
+                    <div id="colorlib-logo"><a href="index.html">{{ config('app.name') }}</a></div>
+                </div>
               </div>
               <div class="col-6 collapse-close">
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
@@ -86,7 +86,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-5 col-md-7">
           <div class="card bg-secondary shadow border-0">
-           
+
             <div class="card-body px-lg-5 py-lg-5">
               <div class="text-center text-muted mb-4">
                 <small>Sign in with your credentials</small>
@@ -108,7 +108,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="form-group mb-3">
                         <div class="input-group input-group-alternative">
                         <div class="input-group-prepend">
@@ -122,20 +122,20 @@
                         @endif
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <div class="input-group input-group-alternative">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
                         </div>
                         <input placeholder="Password" id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-    
+
                         @if ($errors->has('password'))
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $errors->first('password') }}</strong>
                             </span>
                         @endif
-    
+
                         </div>
                     </div>
 
@@ -147,14 +147,14 @@
                             <input placeholder="Confirm Password" id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password_confirmation" required>
                         </div>
                     </div>
-                    
+
                     <div class="custom-control custom-control-alternative custom-checkbox">
                         <input class="custom-control-input" id="remember" name="remember" type="checkbox" {{ old('remember') ? 'checked' : '' }}>
                         <label class="custom-control-label" for="remember">
                         <span class="text-muted">Remember me</span>
                         </label>
                     </div>
-    
+
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary my-4">Register</button>
                     </div>
@@ -177,7 +177,7 @@
   </div>
 
   @include('partials.brochure._footer')
-	
+
 	@include('partials.brochure._scripts')
 </body>
 
