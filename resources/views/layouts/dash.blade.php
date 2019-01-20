@@ -5,7 +5,7 @@
   @include('partials.dash._head')
 </head>
 
-<body>
+<body class="g-sidenav-show g-sidenav-pinned">
   <!-- Sidenav -->
   @include('partials.dash._sidenav')
   <!-- Main content -->

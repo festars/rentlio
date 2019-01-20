@@ -27,7 +27,7 @@ class ListingController extends Controller
      */
     public function create()
     {
-        //
+        return view('listings.create');
     }
 
     /**
@@ -38,7 +38,22 @@ class ListingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $filename = $request->file('banner_image')->store('listingimgs');
+        
+        $listing = $request->user()->listings()->create([
+            'landlord_id' => $request->user()->id,
+            'address' => $request->address, 
+            'description' => $request->description, 
+            'price' => $request->price, 
+            'banner_image' => $filename, 
+            'listing_images' => NULL, 
+            'type' => 'apartment', 
+            'available' => 1, 
+            'descriptors' => NULL, 
+        ]);
+
+        return redirect()->route('listings.show', compact('listing'));
     }
 
     /**

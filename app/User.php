@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Notification;
 use App\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -29,4 +30,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function notifications()
+    {
+        return $this->hasMany(Notification::class);
+    }
+
+    public function listings()
+    {
+        return $this->hasMany(Listing::class, 'id', 'landlord_id');
+    }
 }

@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Listing extends Model
 {
+
+    protected $guarded = [];
+
+    
     public function landlord() 
     {
         return $this->belongsTo(User::class);

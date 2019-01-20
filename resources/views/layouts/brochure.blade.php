@@ -24,7 +24,7 @@
       <div class="container py-1">
         <div class="row align-items-center">
           <div class="col-8 col-md-8 col-lg-4">
-            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0"><strong>RapidRenter<span class="text-danger">.</span></strong></a></h1>
+            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0"><strong>{{ config('app.name') }}<span class="text-danger">.</span></strong></a></h1>
           </div>
           <div class="col-4 col-md-4 col-lg-8">
             {{-- navigation --}}

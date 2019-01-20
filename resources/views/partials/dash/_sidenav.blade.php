@@ -75,7 +75,7 @@
 
           @landlord
 
-          <li class="nav-item">
+          <li class="nav-item ">
             <a class="nav-link" href="./index.html">
               <i class="ni ni-tv-2 text-primary"></i>
               <span class="nav-link-text">Properties</span>

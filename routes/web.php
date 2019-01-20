@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Storage;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dash', 'DashboardController@index')->name('home');
 Route::get('/about', 'BrochureController@about')->name('brochure.about');
 Route::get('/contact', 'BrochureController@contact')->name('brochure.contact');
 Route::get('/tenants', 'BrochureController@tenants')->name('brochure.tenants');
@@ -30,3 +32,10 @@ Route::get('/account/connect/complete', 'Account\MarketplaceConnectController@st
 Route::post('/payment/process/{listing}', 'Payment\PaymentProcessorController@store')->name('payment.process');
 
 Route::resource('listings', 'ListingController')->middleware('auth');
+
+
+Route::get('/testing', function() {
+
+    $contents = Storage::get('avatars');
+    dd($contents);
+});

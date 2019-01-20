@@ -46,8 +46,8 @@
                     </div>
                   </div>
                   <p class="mt-3 mb-0 text-sm">
-                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
-                    <span class="text-nowrap">Since last month</span>
+                    {{-- <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span> --}}
+                    {{-- <span class="text-nowrap">Since last month</span> --}}
                   </p>
                 </div>
               </div>
@@ -65,7 +65,7 @@
             <!-- Basic with list group -->
             <div class="card">
               <!-- Card image -->
-              <img class="card-img-top" src="{{ $listing->banner_image}}" alt="Image placeholder">
+              <img class="card-img-top" src="{{$listing->banner_image}}" alt="Image placeholder">
               <!-- List group -->
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">{{ $listing->address }}</li>

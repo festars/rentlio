@@ -1,20 +1,11 @@
-<nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
+<nav class="navbar navbar-top navbar-expand navbar-dark bg-default border-bottom">
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- Search form -->
-        <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
-          <div class="form-group mb-0">
-            <div class="input-group input-group-alternative input-group-merge">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-search"></i></span>
-              </div>
-              <input class="form-control" placeholder="Search" type="text">
-            </div>
-          </div>
-          <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </form>
+
+        <h2 class="text-white">
+          {{ config('app.name') }}
+        </h2>
+        
         <!-- Navbar links -->
         <ul class="navbar-nav align-items-center ml-md-auto">
           <li class="nav-item d-xl-none">
@@ -47,7 +38,7 @@
                   <div class="row align-items-center">
                     <div class="col-auto">
                       <!-- Avatar -->
-                      <img alt="Image placeholder" src="dash/img/theme/team-1.jpg" class="avatar rounded-circle">
+                      <img alt="Image placeholder" src="/dash/img/theme/team-1.jpg" class="avatar rounded-circle">
                     </div>
                     <div class="col ml--2">
                       <div class="d-flex justify-content-between align-items-center">
@@ -66,7 +57,7 @@
                   <div class="row align-items-center">
                     <div class="col-auto">
                       <!-- Avatar -->
-                      <img alt="Image placeholder" src="dash/img/theme/team-2.jpg" class="avatar rounded-circle">
+                      <img alt="Image placeholder" src="/dash/img/theme/team-2.jpg" class="avatar rounded-circle">
                     </div>
                     <div class="col ml--2">
                       <div class="d-flex justify-content-between align-items-center">
@@ -85,7 +76,7 @@
                   <div class="row align-items-center">
                     <div class="col-auto">
                       <!-- Avatar -->
-                      <img alt="Image placeholder" src="dash/img/theme/team-3.jpg" class="avatar rounded-circle">
+                      <img alt="Image placeholder" src="/dash/img/theme/team-3.jpg" class="avatar rounded-circle">
                     </div>
                     <div class="col ml--2">
                       <div class="d-flex justify-content-between align-items-center">
@@ -104,7 +95,7 @@
                   <div class="row align-items-center">
                     <div class="col-auto">
                       <!-- Avatar -->
-                      <img alt="Image placeholder" src="dash/img/theme/team-4.jpg" class="avatar rounded-circle">
+                      <img alt="Image placeholder" src="/dash/img/theme/team-4.jpg" class="avatar rounded-circle">
                     </div>
                     <div class="col ml--2">
                       <div class="d-flex justify-content-between align-items-center">
@@ -123,7 +114,7 @@
                   <div class="row align-items-center">
                     <div class="col-auto">
                       <!-- Avatar -->
-                      <img alt="Image placeholder" src="dash/img/theme/team-5.jpg" class="avatar rounded-circle">
+                      <img alt="Image placeholder" src="/dash/img/theme/team-5.jpg" class="avatar rounded-circle">
                     </div>
                     <div class="col ml--2">
                       <div class="d-flex justify-content-between align-items-center">
@@ -143,58 +134,13 @@
               <a href="#!" class="dropdown-item text-center text-primary font-weight-bold py-3">View all</a>
             </div>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="ni ni-ungroup"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-dark bg-default dropdown-menu-right">
-              <div class="row shortcuts px-4">
-                <a href="#!" class="col-4 shortcut-item">
-                  <span class="shortcut-media avatar rounded-circle bg-gradient-red">
-                    <i class="ni ni-calendar-grid-58"></i>
-                  </span>
-                  <small>Calendar</small>
-                </a>
-                <a href="#!" class="col-4 shortcut-item">
-                  <span class="shortcut-media avatar rounded-circle bg-gradient-orange">
-                    <i class="ni ni-email-83"></i>
-                  </span>
-                  <small>Email</small>
-                </a>
-                <a href="#!" class="col-4 shortcut-item">
-                  <span class="shortcut-media avatar rounded-circle bg-gradient-info">
-                    <i class="ni ni-credit-card"></i>
-                  </span>
-                  <small>Payments</small>
-                </a>
-                <a href="#!" class="col-4 shortcut-item">
-                  <span class="shortcut-media avatar rounded-circle bg-gradient-green">
-                    <i class="ni ni-books"></i>
-                  </span>
-                  <small>Reports</small>
-                </a>
-                <a href="#!" class="col-4 shortcut-item">
-                  <span class="shortcut-media avatar rounded-circle bg-gradient-purple">
-                    <i class="ni ni-pin-3"></i>
-                  </span>
-                  <small>Maps</small>
-                </a>
-                <a href="#!" class="col-4 shortcut-item">
-                  <span class="shortcut-media avatar rounded-circle bg-gradient-yellow">
-                    <i class="ni ni-basket"></i>
-                  </span>
-                  <small>Shop</small>
-                </a>
-              </div>
-            </div>
-          </li>
         </ul>
         <ul class="navbar-nav align-items-center ml-auto ml-md-0">
           <li class="nav-item dropdown">
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="media align-items-center">
                 <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder" src="dash/img/avatar.png">
+                  <img alt="Image placeholder" src="/dash/img/avatar.png">
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
                   <span class="mb-0 text-sm  font-weight-bold">{{ auth()->user()->name }}</span>
@@ -212,6 +158,7 @@
 
               <div class="dropdown-divider"></div>
               <form action="{{ route('logout') }}" method="POST">
+                @csrf
                 <button type="submit" class="dropdown-item">
                   <i class="ni ni-user-run"></i>
                   <span>Logout</span>
