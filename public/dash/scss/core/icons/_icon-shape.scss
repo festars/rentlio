@@ -28,6 +28,12 @@
 		}
 	}
 
+	&.icon-xs {
+		i, svg {
+			font-size: .6rem;
+		}
+	}
+
 	svg {
 		width: 30px;
 		height: 30px;

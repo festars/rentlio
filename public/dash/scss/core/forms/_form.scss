@@ -16,6 +16,7 @@
 
 .form-control {
     font-size: $input-btn-font-size;
+    @include transition($transition-ease-in-out);
 
     &:focus {
         &::placeholder {
@@ -24,6 +25,21 @@
     }
 }
 
+// Form control flush
+// Removes borders and paddings from inputs and text areas
+
+.form-control-flush {
+    padding: 0;
+    border-width: 0;
+    background-color: transparent;
+    box-shadow: none;
+
+    &:focus {
+        background-color: transparent;
+        box-shadow: none;
+        border-width: 0;
+    }
+}
 
 // Textarea
 
@@ -73,6 +89,8 @@ textarea[resize="horizontal"] {
 
 // Size variations: Fixes to the bootstrap defaults
 
-.form-control-lg {
-    font-size: $font-size-base;
+.form-control-lg,
+.input-group-lg .form-control,
+.input-group-text {
+    font-size: $font-size-base !important;
 }
