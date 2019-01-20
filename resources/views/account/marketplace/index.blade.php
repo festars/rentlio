@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header">Connect</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,13 +14,12 @@
                         </div>
                     @endif  
 
-                    @admin 
+                    Connect your Stripe Account. 
 
-                    Suck my dick. I am an admin. 
+                    <a href="https://connect.stripe.com/oauth/authorize?response_type=code&state=abc&scope=read_write&client_id={{ config('services.stripe_connect.key' )}}">Connect Your Stripe Account</a>
 
-                    @endadmin
 
-                    You are logged in!
+
                 </div>
             </div>
         </div>

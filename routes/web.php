@@ -19,4 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/account/connect', 'Account\MarketPlaceConnectController@index')->name('account.connect');
+Route::get('/account/connect/complete', 'Account\MarketPlaceConnectController@store')->name('account.complete');
+
 Route::resource('listings', 'ListingController')->middleware('auth');
