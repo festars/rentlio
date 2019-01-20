@@ -10,9 +10,9 @@
     <!-- Navbar -->
     <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
       <div class="container px-4">
-        <a class="navbar-brand" href="../index.html">
-          <img src="./dash/img/brand/white.png" />
-        </a>
+        <div class="col-md-2">
+            <div id="colorlib-logo"><a href="index.html">{{ config('app.name') }}</a></div>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,7 +21,7 @@
           <div class="navbar-collapse-header d-md-none">
             <div class="row">
               <div class="col-6 collapse-brand">
-                <a href="./">
+                <a href="/">
                   <img src="./dash/img/brand/blue.png">
                 </a>
               </div>
