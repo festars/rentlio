@@ -15,9 +15,7 @@
                     @endif  
 
                     @admin 
-
-                    Suck my dick. I am an admin. 
-
+                    I am an admin. 
                     @endadmin
 
                     You are logged in!
