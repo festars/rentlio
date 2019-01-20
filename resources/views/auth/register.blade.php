@@ -21,9 +21,9 @@
           <div class="navbar-collapse-header d-md-none">
             <div class="row">
               <div class="col-6 collapse-brand">
-                <div class="col-md-2">
-                    <div id="colorlib-logo"><a href="index.html">{{ config('app.name') }}</a></div>
-                </div>
+                <a href="./">
+                  <img src="./dash/img/brand/blue.png">
+                </a>
               </div>
               <div class="col-6 collapse-close">
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
