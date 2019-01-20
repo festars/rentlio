@@ -4,9 +4,7 @@
   <meta name="author" content="Creative Tim">
   <title>RapidRenter</title>
   <!-- Favicon -->
-  <div class="col-md-2">
-      <div id="colorlib-logo"><a href="index.html">{{ config('app.name') }}</a></div>
-  </div>
+  <link href="./dash/img/brand/favicon.png" rel="icon" type="image/png">
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <!-- Icons -->
