@@ -17,7 +17,9 @@
 
     <!-- Header -->
     <!-- Header -->
-    <div class="header pb-6 d-flex align-items-center" style="min-height: 500px; background-image: url({{ $listing->banner_image }}); background-size: cover; background-position: center top;">
+        <div class="header pb-6 d-flex align-items-center" style="min-height: 500px; background-image: url('https://images.unsplash.com/photo-1489171078254-c3365d6e359f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'); background-size: cover; background-position: center top;">
+
+    {{-- <div class="header pb-6 d-flex align-items-center" style="min-height: 500px; background-image: url({{ $listing->banner_image }}); background-size: cover; background-position: center top;"> --}}
       <!-- Mask -->
       <span class="mask bg-gradient-default opacity-8"></span>
       <!-- Header container -->
@@ -104,7 +106,7 @@
                       <p class="mt-3 mb-0 text-sm">
                           <button href="#" id="open-door" class="btn btn-primary">Open Door</button>
 
-                          <button href="#" id="close-door" class="btn btn-primary" style="visibility: hidden;">Close Door</button>
+                          <button href="#" id="close-door" class="btn btn-primary">Close Door</button>
                       </p>
                     </div>
     
@@ -236,22 +238,24 @@
   @include('partials.dash._scripts')
 
   <script>
-    $('#open-button').click(function() {
-      $.get("http://bc66329e.ngrok.io/turnon", function(data, status) {
+    $('#close-door').hide();
+
+    $('#open-door').click(function() {
+      $.get("http://c3cb3ec4.ngrok.io/turnon", function(data, status) {
         alert("Data: " + data + "\nStatus: " + status);
       });
       $('#state-door').html('opened');
-      $('#open-button').hide();
-      $('#close-button').show();
+      $('#open-door').hide();
+      $('#close-door').show();
     });
 
-    $('#close-button').click(function() {
-      $.get("http://bc66329e.ngrok.io/turnoff", function(data, status) {
+    $('#close-door').click(function() {
+      $.get("http://c3cb3ec4.ngrok.io/turnoff", function(data, status) {
         alert("Data: " + data + "\nStatus: " + status);
       });
       $('#state-door').html('closed');
-      $('#open-button').show();
-      $('#close-button').hide();
+      $('#open-door').show();
+      $('#close-door').hide();
     });
   </script>
 </body>

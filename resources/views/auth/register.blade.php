@@ -35,7 +35,7 @@
 
             <div class="card-body px-lg-5 py-lg-5">
               <div class="text-center text-muted mb-4">
-                <small>Sign in with your credentials</small>
+                <small>Register with your credentials</small>
               </div>
               <form method="POST" role="form" action="{{ route('register') }}">
                     @csrf
