@@ -91,18 +91,18 @@
 
 
           <li class="nav-item">
-            <a class="nav-link" href="./index.html">
+            <a class="nav-link" href="/home">
               <i class="ni ni-tv-2 text-primary"></i> Dashboard
             </a>
           </li>
 
 
 
-          @admin 
+          @admin
 
           <li class="nav-item">
-            <a class="nav-link" href="./index.html">
-              <i class="ni ni-circle-08 text-primary"></i> User Listing 
+            <a class="nav-link" href="./listings">
+              <i class="ni ni-circle-08 text-primary"></i> User Listing
             </a>
           </li>
 
@@ -114,14 +114,14 @@
 
           @endadmin
 
-          
+
 
 
 
           @realtor
 
           <li class="nav-item">
-            <a class="nav-link" href="./index.html">
+            <a class="nav-link" href="./listings">
               <i class="ni ni-tv-2 text-primary"></i> Listings
             </a>
           </li>
@@ -176,7 +176,7 @@
         </ul>
 
 
-        
+
         {{-- <!-- Divider -->
         <hr class="my-3">
         <!-- Heading -->
