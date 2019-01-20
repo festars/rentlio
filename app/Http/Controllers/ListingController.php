@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Listing;
 use Illuminate\Http\Request;
 
 class ListingController extends Controller
@@ -43,9 +44,9 @@ class ListingController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Listing $listing)
     {
-        //
+        return view('listings.show', compact('listing'));
     }
 
     /**

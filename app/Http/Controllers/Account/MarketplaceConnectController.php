@@ -8,8 +8,10 @@ use App\Http\Controllers\Controller;
 
 class MarketplaceConnectController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        session(['stripe_token' => str_random(60)]);
+
         return view('account.marketplace.index');
     }
 
@@ -18,6 +20,11 @@ class MarketplaceConnectController extends Controller
         if(!$request->code) {
             return redirect()->route('account.connect');
         }
+
+        if($request->state !== session('stripe_token')) {
+            return redirect()->route('account.connect');
+        }
+
 
         $stripeRequest = $guzzle->request('POST', 'https://connect.stripe.com/oauth/token', [
             'form_params' => [
@@ -29,6 +36,12 @@ class MarketplaceConnectController extends Controller
 
         $stripeResponse = json_decode($stripeRequest->getBody());
 
-        dd($stripeResponse);
+        $request->user()->update([
+            'stripe_id' => $stripeResponse->stripe_user_id, 
+            'stripe_key' => $stripeResponse->stripe_publishable_key, 
+        ]);
+
+        return redirect()->route('home')
+            ->withSuccess('You have connected your Stripe account!');
     }
 }

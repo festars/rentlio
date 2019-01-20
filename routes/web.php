@@ -23,3 +23,4 @@ Route::get('/account/connect', 'Account\MarketPlaceConnectController@index')->na
 Route::get('/account/connect/complete', 'Account\MarketPlaceConnectController@store')->name('account.complete');
 
 Route::resource('listings', 'ListingController')->middleware('auth');
+
