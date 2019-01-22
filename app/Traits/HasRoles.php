@@ -15,4 +15,5 @@ trait HasRoles
     {
         return $this->roles->contains('name', $role);
     }
+
 }

@@ -18,9 +18,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/about', 'BrochureController@about')->name('brochure.about');
+Route::get('/contact', 'BrochureController@contact')->name('brochure.contact');
+Route::get('/tenants', 'BrochureController@tenants')->name('brochure.tenants');
+Route::get('/landlords', 'BrochureController@landlords')->name('brochure.landlords');
+Route::get('/realtors', 'BrochureController@realtors')->name('brochure.realtors');
 
 Route::get('/account/connect', 'Account\MarketplaceConnectController@index')->name('account.connect');
 Route::get('/account/connect/complete', 'Account\MarketplaceConnectController@store')->name('account.complete');
 
-Route::resource('listings', 'ListingController')->middleware('auth');
+Route::post('/payment/process/{listing}', 'Payment\PaymentProcessorController@store')->name('payment.process');
 
+Route::resource('listings', 'ListingController')->middleware('auth');

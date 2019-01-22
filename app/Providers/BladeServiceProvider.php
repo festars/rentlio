@@ -22,12 +22,28 @@ class BladeServiceProvider extends ServiceProvider
             return !auth()->user()->hasRole('admin');
         });
 
-        Blade::if('engineer', function() {
-            return auth()->user()->hasRole('engineer');
+        Blade::if('realtor', function() {
+            return auth()->user()->hasRole('realtor');
         });
 
-        Blade::if('notengineer', function() {
-            return !auth()->user()->hasRole('engineer');
+        Blade::if('notrealtor', function() {
+            return !auth()->user()->hasRole('realtor');
+        });
+
+        Blade::if('landlord', function() {
+            return auth()->user()->hasRole('landlord');
+        });
+
+        Blade::if('notlandlord', function() {
+            return !auth()->user()->hasRole('landlord');
+        });
+
+        Blade::if('tenant', function() {
+            return auth()->user()->hasRole('tenant');
+        });
+
+        Blade::if('nottenant', function() {
+            return !auth()->user()->hasRole('tenant');
         });
 
     }

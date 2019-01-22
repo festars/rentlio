@@ -14,7 +14,10 @@ class ListingController extends Controller
      */
     public function index()
     {
-        //
+        $listings = Listing::published()->get();
+
+        return view('listings.index', compact('listings'));
+
     }
 
     /**

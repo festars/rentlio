@@ -16,10 +16,12 @@
 
                     Connect your Stripe Account. 
 
-                    <a href="https://connect.stripe.com/oauth/authorize?response_type=code&state={{ session('stripe_token') }}
-                    &scope=read_write&client_id={{ config('services.stripe_connect.key' )}}">Connect Your Stripe Account</a>
-
-
+                    <a 
+                    href="https://connect.stripe.com/oauth/authorize?response_type=code&state={{ session('stripe_token') }}&scope=read_write&client_id={{ config('services.stripe_connect.key' )}}"
+                    >
+                    Connect Your Stripe Account
+                    </a>
+                    
 
                 </div>
             </div>
