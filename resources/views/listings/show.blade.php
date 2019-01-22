@@ -192,8 +192,8 @@
                       <script 
                           src="https://checkout.stripe.com/checkout.js"
                           class="stripe-button"
-                          data-email="{{ \App\User::first()->email }}"
-                          data-key="{{\App\User::first()->stripe_key }}"
+                          data-email="{{ auth()->user()->email }}"
+                          data-key="{{ $listing->landlord->stripe_key }}"
                           data-amount="{{ $listing->price*100 }}"
                           data-name="Pay for Rent"
                           data-description="{{ $listing->address }}"
