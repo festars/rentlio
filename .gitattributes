@@ -3,4 +3,4 @@
 *.scss linguist-vendored
 *.js linguist-vendored
 CHANGELOG.md export-ignore
-resources/**/* linguist-vendored=false
+*.blade.php linguist-vendored
